@@ -1,0 +1,702 @@
+// 类字节码由表（XX_info）和无符号数u1 u2 u4 u8（表示1 2 4 8个字节）组成
+
+// class路径
+Classfile /Users/zhouhang/IdeaProjects/test/target/classes/geek/exercise/chapter1/byettech/Hello.class
+// 最后一次修改时间
+Last modified 2021年9月20日; size 5130 bytes
+// MD5校验码
+MD5 checksum 5bf91b8608aefd075decf78f30d0774b
+// 源文件名
+Compiled from "Hello.java"
+// 类文件的全限定名
+public class geek.exercise.chapter1.byettech.Hello<T extends java.lang.Object> extends java.lang.Object
+// 次版本
+minor version: 0
+// 主版本
+major version: 52
+flags: (0x0021) ACC_PUBLIC, ACC_SUPER
+this_class: #3                          // geek/exercise/chapter1/byettech/Hello
+super_class: #56                        // java/lang/Object
+// 实现了0个接口 有1个字段 有10个方法（包括构造方法）涉及到类文件的属性4个
+interfaces: 0, fields: 1, methods: 10, attributes: 4
+// 常量池 存字面量和符号引用 字面类似于JAVA常量 符号引用包括类和接口的全限定名、字段的名称和描述符、方法的名称和描述符
+// 常量表 见深入java虚拟机第二版 表6-3
+Constant pool:
+// 常量1 方法符号引用 组合常量56和117 公共父类Object的无参构造
+#1 = Methodref          #56.#117      // java/lang/Object."<init>":()V
+// 常量2 字段符号引用 组合常量3和118 word这个字段被定义为private final T word; 编译后的引用类型 是Object Ljava/lang/Object是Object的类名称
+#2 = Fieldref           #3.#118       // geek/exercise/chapter1/byettech/Hello.word:Ljava/lang/Object;
+// 常量3 类的符号引用 指向常量119 当前这个类的全限定名称 
+#3 = Class              #119          // geek/exercise/chapter1/byettech/Hello
+// 常量4 字符串 指向常量120 是在main方法所涉及到的字符串符号
+#4 = String             #120          // Baron
+// 常量5 方法引用 组合常量3和121 Hello的入参是Object的构造方法 <init>表示构造方法 V表示无返回值
+#5 = Methodref          #3.#121       // geek/exercise/chapter1/byettech/Hello."<init>":(Ljava/lang/Object;)V
+// 
+#6 = Methodref          #3.#122       // geek/exercise/chapter1/byettech/Hello.say:()V
+#7 = Double             1.12d
+#9 = Double             3.568d
+#11 = Class              #123          // java/lang/Double
+#12 = Methodref          #11.#124      // java/lang/Double.valueOf:(D)Ljava/lang/Double;
+#13 = Methodref          #125.#126     // java/util/Arrays.asList:([Ljava/lang/Object;)Ljava/util/List;
+#14 = Fieldref           #127.#128     // java/lang/System.out:Ljava/io/PrintStream;
+#15 = Methodref          #3.#129       // geek/exercise/chapter1/byettech/Hello.add:(Ljava/lang/Number;Ljava/lang/Number;)Ljava/lang/Number;
+#16 = Methodref          #130.#131     // java/io/PrintStream.println:(Ljava/lang/Object;)V
+#17 = Methodref          #3.#132       // geek/exercise/chapter1/byettech/Hello.minus:(Ljava/lang/Number;Ljava/lang/Number;)Ljava/lang/Number;
+#18 = Methodref          #3.#133       // geek/exercise/chapter1/byettech/Hello.divide:(Ljava/lang/Number;Ljava/lang/Number;)Ljava/lang/Number;
+#19 = Methodref          #3.#134       // geek/exercise/chapter1/byettech/Hello.multiple:(Ljava/lang/Number;Ljava/lang/Number;)Ljava/lang/Number;
+#20 = Methodref          #3.#135       // geek/exercise/chapter1/byettech/Hello.sum:(Ljava/util/List;)Ljava/lang/Number;
+#21 = Methodref          #3.#136       // geek/exercise/chapter1/byettech/Hello.testSwitch:(I)V
+#22 = Methodref          #3.#137       // geek/exercise/chapter1/byettech/Hello.testEnumTransformNonNpe:(I)Z
+#23 = Methodref          #130.#138     // java/io/PrintStream.println:(Z)V
+#24 = Class              #139          // geek/exercise/chapter1/byettech/Hello$1
+#25 = Methodref          #24.#117      // geek/exercise/chapter1/byettech/Hello$1."<init>":()V
+#26 = InterfaceMethodref #60.#140      // geek/exercise/chapter1/byettech/Hello$InnerInterface.foo:()V
+#27 = Class              #141          // java/lang/StringBuilder
+#28 = Methodref          #27.#117      // java/lang/StringBuilder."<init>":()V
+#29 = String             #80           // hello
+#30 = Methodref          #27.#142      // java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+#31 = Methodref          #56.#143      // java/lang/Object.toString:()Ljava/lang/String;
+#32 = Methodref          #27.#143      // java/lang/StringBuilder.toString:()Ljava/lang/String;
+#33 = Methodref          #130.#144     // java/io/PrintStream.println:(Ljava/lang/String;)V
+#34 = Methodref          #48.#145      // java/lang/Number.doubleValue:()D
+#35 = Methodref          #38.#146      // java/math/BigDecimal.valueOf:(D)Ljava/math/BigDecimal;
+#36 = Methodref          #38.#147      // java/math/BigDecimal.add:(Ljava/math/BigDecimal;)Ljava/math/BigDecimal;
+#37 = Methodref          #38.#145      // java/math/BigDecimal.doubleValue:()D
+#38 = Class              #148          // java/math/BigDecimal
+#39 = Methodref          #38.#149      // java/math/BigDecimal.divide:(Ljava/math/BigDecimal;II)Ljava/math/BigDecimal;
+#40 = Methodref          #38.#150      // java/math/BigDecimal.multiply:(Ljava/math/BigDecimal;)Ljava/math/BigDecimal;
+#41 = Methodref          #38.#151      // java/math/BigDecimal.subtract:(Ljava/math/BigDecimal;)Ljava/math/BigDecimal;
+#42 = InterfaceMethodref #152.#153     // java/util/List.isEmpty:()Z
+#43 = Methodref          #154.#155     // java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+#44 = InterfaceMethodref #152.#156     // java/util/List.stream:()Ljava/util/stream/Stream;
+#45 = InvokeDynamic      #0:#162       // #0:apply:()Ljava/util/function/BinaryOperator;
+#46 = InterfaceMethodref #163.#164     // java/util/stream/Stream.reduce:(Ljava/util/function/BinaryOperator;)Ljava/util/Optional;
+#47 = Methodref          #165.#166     // java/util/Optional.get:()Ljava/lang/Object;
+#48 = Class              #167          // java/lang/Number
+#49 = String             #168          // 1
+#50 = String             #169          // 2
+#51 = String             #170          // 3
+#52 = String             #171          // 4
+#53 = String             #172          // 判断不了
+#54 = Methodref          #57.#173      // geek/exercise/chapter1/byettech/Hello$InnerEnum.valueOf:(Ljava/lang/Integer;)Lgeek/exercise/chapter1/byettech/Hello$InnerEnum;
+#55 = Methodref          #174.#175     // java/util/Objects.isNull:(Ljava/lang/Object;)Z
+#56 = Class              #176          // java/lang/Object
+#57 = Class              #177          // geek/exercise/chapter1/byettech/Hello$InnerEnum
+#58 = Utf8               InnerEnum
+#59 = Utf8               InnerClasses
+#60 = Class              #178          // geek/exercise/chapter1/byettech/Hello$InnerInterface
+#61 = Utf8               InnerInterface
+#62 = Utf8               word
+#63 = Utf8               Ljava/lang/Object;
+#64 = Utf8               Signature
+#65 = Utf8               TT;
+#66 = Utf8               <init>
+#67 = Utf8               (Ljava/lang/Object;)V
+#68 = Utf8               Code
+#69 = Utf8               LineNumberTable
+#70 = Utf8               LocalVariableTable
+#71 = Utf8               this
+#72 = Utf8               Lgeek/exercise/chapter1/byettech/Hello;
+#73 = Utf8               LocalVariableTypeTable
+#74 = Utf8               Lgeek/exercise/chapter1/byettech/Hello<TT;>;
+#75 = Utf8               (TT;)V
+#76 = Utf8               main
+#77 = Utf8               ([Ljava/lang/String;)V
+#78 = Utf8               args
+#79 = Utf8               [Ljava/lang/String;
+#80 = Utf8               hello
+#81 = Utf8               var1
+#82 = Utf8               D
+#83 = Utf8               var2
+#84 = Utf8               doubleList
+#85 = Utf8               Ljava/util/List;
+#86 = Utf8               innerInterface
+#87 = Utf8               Lgeek/exercise/chapter1/byettech/Hello$InnerInterface;
+#88 = Utf8               Lgeek/exercise/chapter1/byettech/Hello<Ljava/lang/String;>;
+#89 = Utf8               Ljava/util/List<Ljava/lang/Double;>;
+#90 = Utf8               say
+#91 = Utf8               ()V
+#92 = Utf8               add
+#93 = Utf8               (Ljava/lang/Number;Ljava/lang/Number;)Ljava/lang/Number;
+#94 = Utf8               Ljava/lang/Number;
+#95 = Utf8               bigDecimal1
+#96 = Utf8               Ljava/math/BigDecimal;
+#97 = Utf8               bigDecimal2
+#98 = Utf8               divide
+#99 = Utf8               multiple
+#100 = Utf8               minus
+#101 = Utf8               sum
+#102 = Utf8               (Ljava/util/List;)Ljava/lang/Number;
+#103 = Utf8               list
+#104 = Utf8               StackMapTable
+#105 = Utf8               (Ljava/util/List<Ljava/lang/Double;>;)Ljava/lang/Number;
+#106 = Utf8               testSwitch
+#107 = Utf8               (I)V
+#108 = Utf8               number
+#109 = Utf8               I
+#110 = Utf8               testEnumTransformNonNpe
+#111 = Utf8               (I)Z
+#112 = Utf8               innerEnum
+#113 = Utf8               Lgeek/exercise/chapter1/byettech/Hello$InnerEnum;
+#114 = Utf8               <T:Ljava/lang/Object;>Ljava/lang/Object;
+#115 = Utf8               SourceFile
+#116 = Utf8               Hello.java
+#117 = NameAndType        #66:#91       // "<init>":()V
+#118 = NameAndType        #62:#63       // word:Ljava/lang/Object;
+#119 = Utf8               geek/exercise/chapter1/byettech/Hello
+#120 = Utf8               Baron
+#121 = NameAndType        #66:#67       // "<init>":(Ljava/lang/Object;)V
+#122 = NameAndType        #90:#91       // say:()V
+#123 = Utf8               java/lang/Double
+#124 = NameAndType        #179:#180     // valueOf:(D)Ljava/lang/Double;
+#125 = Class              #181          // java/util/Arrays
+#126 = NameAndType        #182:#183     // asList:([Ljava/lang/Object;)Ljava/util/List;
+#127 = Class              #184          // java/lang/System
+#128 = NameAndType        #185:#186     // out:Ljava/io/PrintStream;
+#129 = NameAndType        #92:#93       // add:(Ljava/lang/Number;Ljava/lang/Number;)Ljava/lang/Number;
+#130 = Class              #187          // java/io/PrintStream
+#131 = NameAndType        #188:#67      // println:(Ljava/lang/Object;)V
+#132 = NameAndType        #100:#93      // minus:(Ljava/lang/Number;Ljava/lang/Number;)Ljava/lang/Number;
+#133 = NameAndType        #98:#93       // divide:(Ljava/lang/Number;Ljava/lang/Number;)Ljava/lang/Number;
+#134 = NameAndType        #99:#93       // multiple:(Ljava/lang/Number;Ljava/lang/Number;)Ljava/lang/Number;
+#135 = NameAndType        #101:#102     // sum:(Ljava/util/List;)Ljava/lang/Number;
+#136 = NameAndType        #106:#107     // testSwitch:(I)V
+#137 = NameAndType        #110:#111     // testEnumTransformNonNpe:(I)Z
+#138 = NameAndType        #188:#189     // println:(Z)V
+#139 = Utf8               geek/exercise/chapter1/byettech/Hello$1
+#140 = NameAndType        #190:#91      // foo:()V
+#141 = Utf8               java/lang/StringBuilder
+#142 = NameAndType        #191:#192     // append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+#143 = NameAndType        #193:#194     // toString:()Ljava/lang/String;
+#144 = NameAndType        #188:#195     // println:(Ljava/lang/String;)V
+#145 = NameAndType        #196:#197     // doubleValue:()D
+#146 = NameAndType        #179:#198     // valueOf:(D)Ljava/math/BigDecimal;
+#147 = NameAndType        #92:#199      // add:(Ljava/math/BigDecimal;)Ljava/math/BigDecimal;
+#148 = Utf8               java/math/BigDecimal
+#149 = NameAndType        #98:#200      // divide:(Ljava/math/BigDecimal;II)Ljava/math/BigDecimal;
+#150 = NameAndType        #201:#199     // multiply:(Ljava/math/BigDecimal;)Ljava/math/BigDecimal;
+#151 = NameAndType        #202:#199     // subtract:(Ljava/math/BigDecimal;)Ljava/math/BigDecimal;
+#152 = Class              #203          // java/util/List
+#153 = NameAndType        #204:#205     // isEmpty:()Z
+#154 = Class              #206          // java/lang/Integer
+#155 = NameAndType        #179:#207     // valueOf:(I)Ljava/lang/Integer;
+#156 = NameAndType        #208:#209     // stream:()Ljava/util/stream/Stream;
+#157 = Utf8               BootstrapMethods
+#158 = MethodHandle       6:#210        // REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+#159 = MethodType         #211          //  (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+#160 = MethodHandle       6:#212        // REF_invokeStatic java/lang/Double.sum:(DD)D
+#161 = MethodType         #213          //  (Ljava/lang/Double;Ljava/lang/Double;)Ljava/lang/Double;
+#162 = NameAndType        #214:#215     // apply:()Ljava/util/function/BinaryOperator;
+#163 = Class              #216          // java/util/stream/Stream
+#164 = NameAndType        #217:#218     // reduce:(Ljava/util/function/BinaryOperator;)Ljava/util/Optional;
+#165 = Class              #219          // java/util/Optional
+#166 = NameAndType        #220:#221     // get:()Ljava/lang/Object;
+#167 = Utf8               java/lang/Number
+#168 = Utf8               1
+#169 = Utf8               2
+#170 = Utf8               3
+#171 = Utf8               4
+#172 = Utf8               判断不了
+#173 = NameAndType        #179:#222     // valueOf:(Ljava/lang/Integer;)Lgeek/exercise/chapter1/byettech/Hello$InnerEnum;
+#174 = Class              #223          // java/util/Objects
+#175 = NameAndType        #224:#225     // isNull:(Ljava/lang/Object;)Z
+#176 = Utf8               java/lang/Object
+#177 = Utf8               geek/exercise/chapter1/byettech/Hello$InnerEnum
+#178 = Utf8               geek/exercise/chapter1/byettech/Hello$InnerInterface
+#179 = Utf8               valueOf
+#180 = Utf8               (D)Ljava/lang/Double;
+#181 = Utf8               java/util/Arrays
+#182 = Utf8               asList
+#183 = Utf8               ([Ljava/lang/Object;)Ljava/util/List;
+#184 = Utf8               java/lang/System
+#185 = Utf8               out
+#186 = Utf8               Ljava/io/PrintStream;
+#187 = Utf8               java/io/PrintStream
+#188 = Utf8               println
+#189 = Utf8               (Z)V
+#190 = Utf8               foo
+#191 = Utf8               append
+#192 = Utf8               (Ljava/lang/String;)Ljava/lang/StringBuilder;
+#193 = Utf8               toString
+#194 = Utf8               ()Ljava/lang/String;
+#195 = Utf8               (Ljava/lang/String;)V
+#196 = Utf8               doubleValue
+#197 = Utf8               ()D
+#198 = Utf8               (D)Ljava/math/BigDecimal;
+#199 = Utf8               (Ljava/math/BigDecimal;)Ljava/math/BigDecimal;
+#200 = Utf8               (Ljava/math/BigDecimal;II)Ljava/math/BigDecimal;
+#201 = Utf8               multiply
+#202 = Utf8               subtract
+#203 = Utf8               java/util/List
+#204 = Utf8               isEmpty
+#205 = Utf8               ()Z
+#206 = Utf8               java/lang/Integer
+#207 = Utf8               (I)Ljava/lang/Integer;
+#208 = Utf8               stream
+#209 = Utf8               ()Ljava/util/stream/Stream;
+#210 = Methodref          #226.#227     // java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+#211 = Utf8               (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+#212 = Methodref          #11.#228      // java/lang/Double.sum:(DD)D
+#213 = Utf8               (Ljava/lang/Double;Ljava/lang/Double;)Ljava/lang/Double;
+#214 = Utf8               apply
+#215 = Utf8               ()Ljava/util/function/BinaryOperator;
+#216 = Utf8               java/util/stream/Stream
+#217 = Utf8               reduce
+#218 = Utf8               (Ljava/util/function/BinaryOperator;)Ljava/util/Optional;
+#219 = Utf8               java/util/Optional
+#220 = Utf8               get
+#221 = Utf8               ()Ljava/lang/Object;
+#222 = Utf8               (Ljava/lang/Integer;)Lgeek/exercise/chapter1/byettech/Hello$InnerEnum;
+#223 = Utf8               java/util/Objects
+#224 = Utf8               isNull
+#225 = Utf8               (Ljava/lang/Object;)Z
+#226 = Class              #229          // java/lang/invoke/LambdaMetafactory
+#227 = NameAndType        #230:#233     // metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+#228 = NameAndType        #101:#234     // sum:(DD)D
+#229 = Utf8               java/lang/invoke/LambdaMetafactory
+#230 = Utf8               metafactory
+#231 = Class              #236          // java/lang/invoke/MethodHandles$Lookup
+#232 = Utf8               Lookup
+#233 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+#234 = Utf8               (DD)D
+#235 = Class              #237          // java/lang/invoke/MethodHandles
+#236 = Utf8               java/lang/invoke/MethodHandles$Lookup
+#237 = Utf8               java/lang/invoke/MethodHandles
+{
+public geek.exercise.chapter1.byettech.Hello(T);
+descriptor: (Ljava/lang/Object;)V
+flags: (0x0001) ACC_PUBLIC
+Code:
+stack=2, locals=2, args_size=2
+ 0: aload_0
+ 1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+ 4: aload_0
+ 5: aload_1
+ 6: putfield      #2                  // Field word:Ljava/lang/Object;
+ 9: return
+LineNumberTable:
+line 17: 0
+line 18: 4
+line 19: 9
+LocalVariableTable:
+Start  Length  Slot  Name   Signature
+    0      10     0  this   Lgeek/exercise/chapter1/byettech/Hello;
+    0      10     1  word   Ljava/lang/Object;
+LocalVariableTypeTable:
+Start  Length  Slot  Name   Signature
+    0      10     0  this   Lgeek/exercise/chapter1/byettech/Hello<TT;>;
+    0      10     1  word   TT;
+Signature: #75                          // (TT;)V
+
+public static void main(java.lang.String[]);
+descriptor: ([Ljava/lang/String;)V
+flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+Code:
+stack=5, locals=8, args_size=1
+ 0: new           #3                  // class geek/exercise/chapter1/byettech/Hello
+ 3: dup
+ 4: ldc           #4                  // String Baron
+ 6: invokespecial #5                  // Method "<init>":(Ljava/lang/Object;)V
+ 9: astore_1
+10: aload_1
+11: invokevirtual #6                  // Method say:()V
+14: ldc2_w        #7                  // double 1.12d
+17: dstore_2
+18: ldc2_w        #9                  // double 3.568d
+21: dstore        4
+23: iconst_2
+24: anewarray     #11                 // class java/lang/Double
+27: dup
+28: iconst_0
+29: dload_2
+30: invokestatic  #12                 // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+33: aastore
+34: dup
+35: iconst_1
+36: dload         4
+38: invokestatic  #12                 // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+41: aastore
+42: invokestatic  #13                 // Method java/util/Arrays.asList:([Ljava/lang/Object;)Ljava/util/List;
+45: astore        6
+47: getstatic     #14                 // Field java/lang/System.out:Ljava/io/PrintStream;
+50: aload_1
+51: dload_2
+52: invokestatic  #12                 // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+55: dload         4
+57: invokestatic  #12                 // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+60: invokevirtual #15                 // Method add:(Ljava/lang/Number;Ljava/lang/Number;)Ljava/lang/Number;
+63: invokevirtual #16                 // Method java/io/PrintStream.println:(Ljava/lang/Object;)V
+66: getstatic     #14                 // Field java/lang/System.out:Ljava/io/PrintStream;
+69: aload_1
+70: dload_2
+71: invokestatic  #12                 // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+74: dload         4
+76: invokestatic  #12                 // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+79: invokevirtual #17                 // Method minus:(Ljava/lang/Number;Ljava/lang/Number;)Ljava/lang/Number;
+82: invokevirtual #16                 // Method java/io/PrintStream.println:(Ljava/lang/Object;)V
+85: getstatic     #14                 // Field java/lang/System.out:Ljava/io/PrintStream;
+88: aload_1
+89: dload_2
+90: invokestatic  #12                 // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+93: dload         4
+95: invokestatic  #12                 // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+98: invokevirtual #18                 // Method divide:(Ljava/lang/Number;Ljava/lang/Number;)Ljava/lang/Number;
+101: invokevirtual #16                 // Method java/io/PrintStream.println:(Ljava/lang/Object;)V
+104: getstatic     #14                 // Field java/lang/System.out:Ljava/io/PrintStream;
+107: aload_1
+108: dload_2
+109: invokestatic  #12                 // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+112: dload         4
+114: invokestatic  #12                 // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+117: invokevirtual #19                 // Method multiple:(Ljava/lang/Number;Ljava/lang/Number;)Ljava/lang/Number;
+120: invokevirtual #16                 // Method java/io/PrintStream.println:(Ljava/lang/Object;)V
+123: getstatic     #14                 // Field java/lang/System.out:Ljava/io/PrintStream;
+126: aload_1
+127: aload         6
+129: invokevirtual #20                 // Method sum:(Ljava/util/List;)Ljava/lang/Number;
+132: invokevirtual #16                 // Method java/io/PrintStream.println:(Ljava/lang/Object;)V
+135: aload_1
+136: dload_2
+137: d2i
+138: invokevirtual #21                 // Method testSwitch:(I)V
+141: getstatic     #14                 // Field java/lang/System.out:Ljava/io/PrintStream;
+144: aload_1
+145: dload         4
+147: d2i
+148: invokevirtual #22                 // Method testEnumTransformNonNpe:(I)Z
+151: invokevirtual #23                 // Method java/io/PrintStream.println:(Z)V
+154: new           #24                 // class geek/exercise/chapter1/byettech/Hello$1
+157: dup
+158: invokespecial #25                 // Method geek/exercise/chapter1/byettech/Hello$1."<init>":()V
+161: astore        7
+163: aload         7
+165: invokeinterface #26,  1           // InterfaceMethod geek/exercise/chapter1/byettech/Hello$InnerInterface.foo:()V
+170: return
+LineNumberTable:
+line 22: 0
+line 24: 10
+line 26: 14
+line 27: 18
+line 28: 23
+line 29: 47
+line 30: 66
+line 31: 85
+line 32: 104
+line 33: 123
+line 36: 135
+line 38: 141
+line 41: 154
+line 50: 163
+line 51: 170
+LocalVariableTable:
+Start  Length  Slot  Name   Signature
+    0     171     0  args   [Ljava/lang/String;
+   10     161     1 hello   Lgeek/exercise/chapter1/byettech/Hello;
+   18     153     2  var1   D
+   23     148     4  var2   D
+   47     124     6 doubleList   Ljava/util/List;
+  163       8     7 innerInterface   Lgeek/exercise/chapter1/byettech/Hello$InnerInterface;
+LocalVariableTypeTable:
+Start  Length  Slot  Name   Signature
+   10     161     1 hello   Lgeek/exercise/chapter1/byettech/Hello<Ljava/lang/String;>;
+   47     124     6 doubleList   Ljava/util/List<Ljava/lang/Double;>;
+
+public void say();
+descriptor: ()V
+flags: (0x0001) ACC_PUBLIC
+Code:
+stack=3, locals=1, args_size=1
+ 0: getstatic     #14                 // Field java/lang/System.out:Ljava/io/PrintStream;
+ 3: new           #27                 // class java/lang/StringBuilder
+ 6: dup
+ 7: invokespecial #28                 // Method java/lang/StringBuilder."<init>":()V
+10: ldc           #29                 // String hello
+12: invokevirtual #30                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+15: aload_0
+16: getfield      #2                  // Field word:Ljava/lang/Object;
+19: invokevirtual #31                 // Method java/lang/Object.toString:()Ljava/lang/String;
+22: invokevirtual #30                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+25: invokevirtual #32                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+28: invokevirtual #33                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+31: return
+LineNumberTable:
+line 54: 0
+line 55: 31
+LocalVariableTable:
+Start  Length  Slot  Name   Signature
+    0      32     0  this   Lgeek/exercise/chapter1/byettech/Hello;
+LocalVariableTypeTable:
+Start  Length  Slot  Name   Signature
+    0      32     0  this   Lgeek/exercise/chapter1/byettech/Hello<TT;>;
+
+public java.lang.Number add(java.lang.Number, java.lang.Number);
+descriptor: (Ljava/lang/Number;Ljava/lang/Number;)Ljava/lang/Number;
+flags: (0x0001) ACC_PUBLIC
+Code:
+stack=2, locals=5, args_size=3
+ 0: aload_1
+ 1: invokevirtual #34                 // Method java/lang/Number.doubleValue:()D
+ 4: invokestatic  #35                 // Method java/math/BigDecimal.valueOf:(D)Ljava/math/BigDecimal;
+ 7: astore_3
+ 8: aload_2
+ 9: invokevirtual #34                 // Method java/lang/Number.doubleValue:()D
+12: invokestatic  #35                 // Method java/math/BigDecimal.valueOf:(D)Ljava/math/BigDecimal;
+15: astore        4
+17: aload_3
+18: aload         4
+20: invokevirtual #36                 // Method java/math/BigDecimal.add:(Ljava/math/BigDecimal;)Ljava/math/BigDecimal;
+23: invokevirtual #37                 // Method java/math/BigDecimal.doubleValue:()D
+26: invokestatic  #12                 // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+29: areturn
+LineNumberTable:
+line 58: 0
+line 60: 8
+line 61: 17
+LocalVariableTable:
+Start  Length  Slot  Name   Signature
+    0      30     0  this   Lgeek/exercise/chapter1/byettech/Hello;
+    0      30     1  var1   Ljava/lang/Number;
+    0      30     2  var2   Ljava/lang/Number;
+    8      22     3 bigDecimal1   Ljava/math/BigDecimal;
+   17      13     4 bigDecimal2   Ljava/math/BigDecimal;
+LocalVariableTypeTable:
+Start  Length  Slot  Name   Signature
+    0      30     0  this   Lgeek/exercise/chapter1/byettech/Hello<TT;>;
+
+public java.lang.Number divide(java.lang.Number, java.lang.Number);
+descriptor: (Ljava/lang/Number;Ljava/lang/Number;)Ljava/lang/Number;
+flags: (0x0001) ACC_PUBLIC
+Code:
+stack=4, locals=5, args_size=3
+ 0: aload_1
+ 1: invokevirtual #34                 // Method java/lang/Number.doubleValue:()D
+ 4: invokestatic  #35                 // Method java/math/BigDecimal.valueOf:(D)Ljava/math/BigDecimal;
+ 7: astore_3
+ 8: aload_2
+ 9: invokevirtual #34                 // Method java/lang/Number.doubleValue:()D
+12: invokestatic  #35                 // Method java/math/BigDecimal.valueOf:(D)Ljava/math/BigDecimal;
+15: astore        4
+17: aload_3
+18: aload         4
+20: iconst_2
+21: iconst_5
+22: invokevirtual #39                 // Method java/math/BigDecimal.divide:(Ljava/math/BigDecimal;II)Ljava/math/BigDecimal;
+25: invokevirtual #37                 // Method java/math/BigDecimal.doubleValue:()D
+28: invokestatic  #12                 // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+31: areturn
+LineNumberTable:
+line 65: 0
+line 66: 8
+line 67: 17
+LocalVariableTable:
+Start  Length  Slot  Name   Signature
+    0      32     0  this   Lgeek/exercise/chapter1/byettech/Hello;
+    0      32     1  var1   Ljava/lang/Number;
+    0      32     2  var2   Ljava/lang/Number;
+    8      24     3 bigDecimal1   Ljava/math/BigDecimal;
+   17      15     4 bigDecimal2   Ljava/math/BigDecimal;
+LocalVariableTypeTable:
+Start  Length  Slot  Name   Signature
+    0      32     0  this   Lgeek/exercise/chapter1/byettech/Hello<TT;>;
+
+public java.lang.Number multiple(java.lang.Number, java.lang.Number);
+descriptor: (Ljava/lang/Number;Ljava/lang/Number;)Ljava/lang/Number;
+flags: (0x0001) ACC_PUBLIC
+Code:
+stack=2, locals=5, args_size=3
+ 0: aload_1
+ 1: invokevirtual #34                 // Method java/lang/Number.doubleValue:()D
+ 4: invokestatic  #35                 // Method java/math/BigDecimal.valueOf:(D)Ljava/math/BigDecimal;
+ 7: astore_3
+ 8: aload_2
+ 9: invokevirtual #34                 // Method java/lang/Number.doubleValue:()D
+12: invokestatic  #35                 // Method java/math/BigDecimal.valueOf:(D)Ljava/math/BigDecimal;
+15: astore        4
+17: aload_3
+18: aload         4
+20: invokevirtual #40                 // Method java/math/BigDecimal.multiply:(Ljava/math/BigDecimal;)Ljava/math/BigDecimal;
+23: invokevirtual #37                 // Method java/math/BigDecimal.doubleValue:()D
+26: invokestatic  #12                 // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+29: areturn
+LineNumberTable:
+line 71: 0
+line 72: 8
+line 73: 17
+LocalVariableTable:
+Start  Length  Slot  Name   Signature
+    0      30     0  this   Lgeek/exercise/chapter1/byettech/Hello;
+    0      30     1  var1   Ljava/lang/Number;
+    0      30     2  var2   Ljava/lang/Number;
+    8      22     3 bigDecimal1   Ljava/math/BigDecimal;
+   17      13     4 bigDecimal2   Ljava/math/BigDecimal;
+LocalVariableTypeTable:
+Start  Length  Slot  Name   Signature
+    0      30     0  this   Lgeek/exercise/chapter1/byettech/Hello<TT;>;
+
+public java.lang.Number minus(java.lang.Number, java.lang.Number);
+descriptor: (Ljava/lang/Number;Ljava/lang/Number;)Ljava/lang/Number;
+flags: (0x0001) ACC_PUBLIC
+Code:
+stack=2, locals=5, args_size=3
+ 0: aload_1
+ 1: invokevirtual #34                 // Method java/lang/Number.doubleValue:()D
+ 4: invokestatic  #35                 // Method java/math/BigDecimal.valueOf:(D)Ljava/math/BigDecimal;
+ 7: astore_3
+ 8: aload_2
+ 9: invokevirtual #34                 // Method java/lang/Number.doubleValue:()D
+12: invokestatic  #35                 // Method java/math/BigDecimal.valueOf:(D)Ljava/math/BigDecimal;
+15: astore        4
+17: aload_3
+18: aload         4
+20: invokevirtual #41                 // Method java/math/BigDecimal.subtract:(Ljava/math/BigDecimal;)Ljava/math/BigDecimal;
+23: invokevirtual #37                 // Method java/math/BigDecimal.doubleValue:()D
+26: invokestatic  #12                 // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+29: areturn
+LineNumberTable:
+line 77: 0
+line 78: 8
+line 79: 17
+LocalVariableTable:
+Start  Length  Slot  Name   Signature
+    0      30     0  this   Lgeek/exercise/chapter1/byettech/Hello;
+    0      30     1  var1   Ljava/lang/Number;
+    0      30     2  var2   Ljava/lang/Number;
+    8      22     3 bigDecimal1   Ljava/math/BigDecimal;
+   17      13     4 bigDecimal2   Ljava/math/BigDecimal;
+LocalVariableTypeTable:
+Start  Length  Slot  Name   Signature
+    0      30     0  this   Lgeek/exercise/chapter1/byettech/Hello<TT;>;
+
+public java.lang.Number sum(java.util.List<java.lang.Double>);
+descriptor: (Ljava/util/List;)Ljava/lang/Number;
+flags: (0x0001) ACC_PUBLIC
+Code:
+stack=2, locals=2, args_size=2
+ 0: aload_1
+ 1: invokeinterface #42,  1           // InterfaceMethod java/util/List.isEmpty:()Z
+ 6: ifeq          14
+ 9: iconst_0
+10: invokestatic  #43                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+13: areturn
+14: aload_1
+15: invokeinterface #44,  1           // InterfaceMethod java/util/List.stream:()Ljava/util/stream/Stream;
+20: invokedynamic #45,  0             // InvokeDynamic #0:apply:()Ljava/util/function/BinaryOperator;
+25: invokeinterface #46,  2           // InterfaceMethod java/util/stream/Stream.reduce:(Ljava/util/function/BinaryOperator;)Ljava/util/Optional;
+30: invokevirtual #47                 // Method java/util/Optional.get:()Ljava/lang/Object;
+33: checkcast     #48                 // class java/lang/Number
+36: areturn
+LineNumberTable:
+line 83: 0
+line 84: 9
+line 86: 14
+LocalVariableTable:
+Start  Length  Slot  Name   Signature
+    0      37     0  this   Lgeek/exercise/chapter1/byettech/Hello;
+    0      37     1  list   Ljava/util/List;
+LocalVariableTypeTable:
+Start  Length  Slot  Name   Signature
+    0      37     0  this   Lgeek/exercise/chapter1/byettech/Hello<TT;>;
+    0      37     1  list   Ljava/util/List<Ljava/lang/Double;>;
+StackMapTable: number_of_entries = 1
+frame_type = 14 /* same */
+Signature: #105                         // (Ljava/util/List<Ljava/lang/Double;>;)Ljava/lang/Number;
+
+public void testSwitch(int);
+descriptor: (I)V
+flags: (0x0001) ACC_PUBLIC
+Code:
+stack=2, locals=2, args_size=2
+ 0: iload_1
+ 1: tableswitch   { // 1 to 4
+               1: 32
+               2: 43
+               3: 54
+               4: 65
+         default: 76
+    }
+32: getstatic     #14                 // Field java/lang/System.out:Ljava/io/PrintStream;
+35: ldc           #49                 // String 1
+37: invokevirtual #33                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+40: goto          84
+43: getstatic     #14                 // Field java/lang/System.out:Ljava/io/PrintStream;
+46: ldc           #50                 // String 2
+48: invokevirtual #33                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+51: goto          84
+54: getstatic     #14                 // Field java/lang/System.out:Ljava/io/PrintStream;
+57: ldc           #51                 // String 3
+59: invokevirtual #33                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+62: goto          84
+65: getstatic     #14                 // Field java/lang/System.out:Ljava/io/PrintStream;
+68: ldc           #52                 // String 4
+70: invokevirtual #33                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+73: goto          84
+76: getstatic     #14                 // Field java/lang/System.out:Ljava/io/PrintStream;
+79: ldc           #53                 // String 判断不了
+81: invokevirtual #33                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+84: return
+LineNumberTable:
+line 90: 0
+line 92: 32
+line 93: 40
+line 95: 43
+line 96: 51
+line 98: 54
+line 99: 62
+line 101: 65
+line 102: 73
+line 104: 76
+line 106: 84
+LocalVariableTable:
+Start  Length  Slot  Name   Signature
+    0      85     0  this   Lgeek/exercise/chapter1/byettech/Hello;
+    0      85     1 number   I
+LocalVariableTypeTable:
+Start  Length  Slot  Name   Signature
+    0      85     0  this   Lgeek/exercise/chapter1/byettech/Hello<TT;>;
+StackMapTable: number_of_entries = 6
+frame_type = 32 /* same */
+frame_type = 10 /* same */
+frame_type = 10 /* same */
+frame_type = 10 /* same */
+frame_type = 10 /* same */
+frame_type = 7 /* same */
+
+public boolean testEnumTransformNonNpe(int);
+descriptor: (I)Z
+flags: (0x0001) ACC_PUBLIC
+Code:
+stack=1, locals=3, args_size=2
+ 0: iload_1
+ 1: invokestatic  #43                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+ 4: invokestatic  #54                 // Method geek/exercise/chapter1/byettech/Hello$InnerEnum.valueOf:(Ljava/lang/Integer;)Lgeek/exercise/chapter1/byettech/Hello$InnerEnum;
+ 7: astore_2
+ 8: aload_2
+ 9: invokestatic  #55                 // Method java/util/Objects.isNull:(Ljava/lang/Object;)Z
+12: ireturn
+LineNumberTable:
+line 109: 0
+line 110: 8
+LocalVariableTable:
+Start  Length  Slot  Name   Signature
+    0      13     0  this   Lgeek/exercise/chapter1/byettech/Hello;
+    0      13     1 number   I
+    8       5     2 innerEnum   Lgeek/exercise/chapter1/byettech/Hello$InnerEnum;
+LocalVariableTypeTable:
+Start  Length  Slot  Name   Signature
+    0      13     0  this   Lgeek/exercise/chapter1/byettech/Hello<TT;>;
+}
+Signature: #114                         // <T:Ljava/lang/Object;>Ljava/lang/Object;
+SourceFile: "Hello.java"
+InnerClasses:
+public static final #58= #57 of #3;     // InnerEnum=class geek/exercise/chapter1/byettech/Hello$InnerEnum of class geek/exercise/chapter1/byettech/Hello
+public static #61= #60 of #3;           // InnerInterface=class geek/exercise/chapter1/byettech/Hello$InnerInterface of class geek/exercise/chapter1/byettech/Hello
+static #24;                             // class geek/exercise/chapter1/byettech/Hello$1
+public static final #232= #231 of #235; // Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles
+BootstrapMethods:
+0: #158 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+Method arguments:
+#159 (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+#160 REF_invokeStatic java/lang/Double.sum:(DD)D
+#161 (Ljava/lang/Double;Ljava/lang/Double;)Ljava/lang/Double;
+zhouhang@192 byettech %
