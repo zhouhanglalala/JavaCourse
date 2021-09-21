@@ -24,22 +24,29 @@ interfaces: 0, fields: 1, methods: 10, attributes: 4
 Constant pool:
 // 常量1 方法符号引用 组合常量56和117 公共父类Object的无参构造
 #1 = Methodref          #56.#117      // java/lang/Object."<init>":()V
-// 常量2 字段符号引用 组合常量3和118 word这个字段被定义为private final T word; 编译后的引用类型 是Object Ljava/lang/Object是Object的类名称
+// 常量2 字段符号引用 组合常量3和118 word这个字段被定义为private final T word; 编译后的引用类型 是Object Ljava/lang/Object是Object的类名称 L表示对象
 #2 = Fieldref           #3.#118       // geek/exercise/chapter1/byettech/Hello.word:Ljava/lang/Object;
 // 常量3 类的符号引用 指向常量119 当前这个类的全限定名称 
 #3 = Class              #119          // geek/exercise/chapter1/byettech/Hello
 // 常量4 字符串 指向常量120 是在main方法所涉及到的字符串符号
 #4 = String             #120          // Baron
-// 常量5 方法引用 组合常量3和121 Hello的入参是Object的构造方法 <init>表示构造方法 V表示无返回值
+// 常量5 方法符号引用 组合常量3和121 Hello的入参是Object的构造方法 <init>表示构造方法 V表示无返回值
 #5 = Methodref          #3.#121       // geek/exercise/chapter1/byettech/Hello."<init>":(Ljava/lang/Object;)V
-// 
+// 常量6 方法符号引用 组合常量3和122 Hello的say方法
 #6 = Methodref          #3.#122       // geek/exercise/chapter1/byettech/Hello.say:()V
+// 常量7 double字面量 1.12 即var1
 #7 = Double             1.12d
+// 常量8 即var2的字面量
 #9 = Double             3.568d
+// Double这个类的符号引用
 #11 = Class              #123          // java/lang/Double
+// double valueOf方法的方法引用
 #12 = Methodref          #11.#124      // java/lang/Double.valueOf:(D)Ljava/lang/Double;
+// Arrays.asList方法引用 接受Object数组 返回List
 #13 = Methodref          #125.#126     // java/util/Arrays.asList:([Ljava/lang/Object;)Ljava/util/List;
+// System.out的字段引用  类型是PrintStream
 #14 = Fieldref           #127.#128     // java/lang/System.out:Ljava/io/PrintStream;
+// 方法引用 Hello.add
 #15 = Methodref          #3.#129       // geek/exercise/chapter1/byettech/Hello.add:(Ljava/lang/Number;Ljava/lang/Number;)Ljava/lang/Number;
 #16 = Methodref          #130.#131     // java/io/PrintStream.println:(Ljava/lang/Object;)V
 #17 = Methodref          #3.#132       // geek/exercise/chapter1/byettech/Hello.minus:(Ljava/lang/Number;Ljava/lang/Number;)Ljava/lang/Number;
@@ -264,21 +271,27 @@ Constant pool:
 #236 = Utf8               java/lang/invoke/MethodHandles$Lookup
 #237 = Utf8               java/lang/invoke/MethodHandles
 {
+// hello的带参数构造器
 public geek.exercise.chapter1.byettech.Hello(T);
 descriptor: (Ljava/lang/Object;)V
 flags: (0x0001) ACC_PUBLIC
 Code:
+// 调用父类构造器所以栈深度是2 需要两个栈帧
+// 局部变量有两个 
+// args_size是方法参数的长度 参数列表有两个参数
 stack=2, locals=2, args_size=2
- 0: aload_0
- 1: invokespecial #1                  // Method java/lang/Object."<init>":()V
- 4: aload_0
- 5: aload_1
- 6: putfield      #2                  // Field word:Ljava/lang/Object;
+ 0: aload_0 // 加载变量0到操作数栈
+ 1: invokespecial #1                  // Method java/lang/Object."<init>":()V  Object的无参构造压栈
+ 4: aload_0 // 加载变量0到第二个栈帧的操作数栈
+ 5: aload_1 // 加载变量1到第二个栈帧的操作数栈
+ 6: putfield      #2                  // Field word:Ljava/lang/Object; // 给word字段赋值
  9: return
+// 指令的行号
 LineNumberTable:
 line 17: 0
 line 18: 4
 line 19: 9
+// 局部变量表
 LocalVariableTable:
 Start  Length  Slot  Name   Signature
     0      10     0  this   Lgeek/exercise/chapter1/byettech/Hello;
