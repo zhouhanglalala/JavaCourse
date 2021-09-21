@@ -285,17 +285,18 @@ stack=2, locals=2, args_size=2
  4: aload_0 // 加载变量0到第二个栈帧的操作数栈
  5: aload_1 // 加载变量1到第二个栈帧的操作数栈
  6: putfield      #2                  // Field word:Ljava/lang/Object; // 给word字段赋值
- 9: return
+ 9: return~ 返回
 // 指令的行号
-LineNumberTable:
-line 17: 0
-line 18: 4
+LineNumberTable: 
+line 17: 0 // 源代码17行对应指令0
+line 18: 4 // 源代码18行对应指令4
 line 19: 9
 // 局部变量表
 LocalVariableTable:
 Start  Length  Slot  Name   Signature
     0      10     0  this   Lgeek/exercise/chapter1/byettech/Hello;
     0      10     1  word   Ljava/lang/Object;
+// 局部变量范型表
 LocalVariableTypeTable:
 Start  Length  Slot  Name   Signature
     0      10     0  this   Lgeek/exercise/chapter1/byettech/Hello<TT;>;
